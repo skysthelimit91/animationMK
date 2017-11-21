@@ -1,0 +1,166 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+
+
+	h1{
+
+		color: red;
+	}
+
+	
+
+	#footer{
+
+		background-color: black;
+		width: 1000px;
+		height: 50px;
+		border-color: red;
+		border-color: 
+		margin-top:30px;
+		position: relative;
+
+	}
+
+	#raiden{
+
+		margin-left: 600px;
+		position: relative;
+
+	}
+
+
+	#weapon {
+
+		margin-top: 10px;
+		padding-top:;
+		position: absolute;
+	}
+
+	#scorpion{
+		padding-top: 200px;
+		padding-left: 50px;
+		position: relative;a
+
+	}
+	
+
+
+	body{
+
+		background-image:url('https://s-media-cache-ak0.pinimg.com/originals/ab/56/94/ab569400cba7708a8d42fac2b15cf152.gif');
+		background-size: cover;
+		background-repeat: no-repeat;
+
+	}
+		
+	#myContainer {
+
+
+	
+    position: relative;
+    margin-bottom: ;
+   	size: cover;
+
+
+
+	}
+
+	#myAnimation {
+
+		position: absolute;
+		margin-top: 200px;
+		margin-left: 65px;
+		
+	}
+
+
+
+	</style>
+</head>
+<body>
+<h1>Only one will survive!!!</h1>
+
+
+<div id="myContainer">
+
+	<div id="myAnimation"><img id="weapon" src="weapon1.png" width="250px"></div>
+
+	<img id ="scorpion" src="scorpion.png" height="250px">
+	<img id="raiden" src="raiden1.png" height="250px">
+
+
+
+
+<p>
+	<button onclick="Move()">Click Me</button>
+</p>
+
+<div id="footer"><footer></footer></div>
+
+<script type="text/javascript">
+	var sound = new Audio("scorpion.mp3")
+
+
+function Move() {
+sound.play();
+var raid = document.getElementById("raiden");
+var elem = document.getElementById("weapon");
+var pos = 0;
+var tpos = 0;
+var lpos = 0;
+var id = setInterval(frame, 0);
+
+function frame() {
+	pos++
+	
+
+	if (pos < 550){
+
+		lpos++;
+		elem.style.left = lpos+'px';
+		document.getElementById("scorpion").src = "scorpion2.png"
+
+	}
+
+
+	else if (pos <692){
+		lpos++;
+		elem.style.left = lpos+'px';
+		document.getElementById("weapon").src = "weapon2.png"
+		document.getElementById("scorpion").src = "scorpion3.png"
+		document.getElementById("raiden").src = "raiden2.png"
+
+
+	}  
+
+	else if (pos = 692){
+		lpos--;
+
+		elem.style.left = lpos+'px';
+		document.getElementById("raiden").src = "raiden2.png"
+		raid.style.left = raid+'px';
+		raid.style.marginLeft = "100px";
+		elem.style.marginLeft = "20px";
+
+	}
+
+	else {
+
+
+	clearInterval(id);
+
+setTimeout(Move, 3000);
+}
+
+}
+
+}
+
+</script>
+</div>
+</body>
+</html>
